@@ -4,20 +4,20 @@
     text-decoration: none;
 }
 
-h1,
-footer h3 {
+#accueil,
+footer h2 {
     font-family: Shrikhand;
 }
 
+h1,
 h2,
 h3,
-h4,
 p,
 li {
     font-family: Roboto;
 }
 
-h1 {
+#accueil {
     display: flex;
     justify-content: center;
 }
@@ -29,9 +29,30 @@ h1 {
     align-items: center;
 }
 
-.iconohmy p {
+#accueil {
+    font-size: 32px;
+}
+
+.return {
     margin-right: 20%;
     margin-left: -21%;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 19px;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.iconohmy a {
+    color: black;
 }
 
 .backgroundimg {
@@ -61,7 +82,7 @@ h1 {
     padding: 8% 5% 1% 5%;
 }
 
-.titrerestaurant h2 {
+.titrerestaurant h1 {
     display: flex;
     justify-content: space-between;
     font-family: Shrikhand;
@@ -77,7 +98,8 @@ h1 {
     overflow: hidden;
     animation: open 1300ms forwards;
     opacity: 0;
-    padding: 0 2%;
+    padding: 0 8px;
+    width: 300px;
 }
 
 @keyframes open {
@@ -92,12 +114,18 @@ h1 {
     }
 }
 
-.plats h4 {
+.plats h3 {
     padding-bottom: 1%;
 }
 
 .plats p {
     display: inline;
+}
+
+.allplats {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .lignebas {
@@ -111,17 +139,19 @@ h1 {
     text-overflow: ellipsis;
     font-weight: lighter;
 }
+
 .overflowbis {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 .prix {
     padding-right: 4%;
 }
 
 .gauche {
-    width: 100%;
+    width: 102%;
     transition: all 1s;
     padding: 2% 3% 2% 0;
 }
@@ -129,11 +159,11 @@ h1 {
 .gauche:hover~.droite>i {
     animation: rotation 1s;
 }
+
 .gauche:hover {
-    width: 71%;
+    width: 79%;
     transition: all 1s;
 }
-/* margin-right: -16px;~.droite */
 
 .droite {
     background-color: #99e2d0;
@@ -141,7 +171,7 @@ h1 {
     transition: all 1s;
     display: flex;
     justify-content: center;
-    min-width: 80px;
+    min-width: 63px;
     margin-right: -96px;
     padding: 28px 0;
 }
@@ -282,7 +312,12 @@ h1 {
     background: linear-gradient(to bottom right, #FF79DA, #9356DC);
     color: white;
     border-radius: 30px;
-    padding: 5%;
+    padding: 8%;
+}
+
+.explorer {
+    white-space: nowrap;
+    margin-right: 30px;
 }
 
 .top,
@@ -295,9 +330,14 @@ h1 {
     color: grey;
 }
 
+.titre {
+    font-family: Roboto;
+}
+
 .fonctionnement h2,
 .restaurants h2 {
     margin: 30px;
+    font-size: 24px;
 }
 
 .filtre {
@@ -406,6 +446,10 @@ article img {
     object-position: center;
 }
 
+.tmenu {
+    font-weight: bold;
+}
+
 footer {
     padding: 0 0 5% 5%;
     color: #ffffff;
@@ -417,12 +461,13 @@ footer h3 {
     font-size: medium;
 }
 
-footer ul li {
-    list-style: none;
+footer a {
+    text-decoration: none;
+    color: white;
 }
 
-a {
-    color: white;
+footer ul li {
+    list-style: none;
 }
 
 @media (min-width: 768px) {
@@ -489,7 +534,7 @@ a {
         padding: 0;
     }
 
-    footer h3 {
+    footer h2 {
         margin-left: 20px;
     }
 
@@ -511,7 +556,7 @@ a {
         top: -40px;
     }
 
-    .titrerestaurant h2 {
+    .titrerestaurant h1 {
         padding-left: 3%;
         font-size: 30px;
         display: flex;
@@ -519,7 +564,7 @@ a {
     }
 
     .plats {
-        width: 70%;
+        width: 555px;
         margin: 1%;
     }
 
@@ -530,18 +575,24 @@ a {
         flex-direction: column;
         align-items: center;
     }
+
     /* .gauche:hover~.droite {
         margin-right: -20px;
         transition: all 1s;
     } */
     .gauche:hover {
-        width: 84%;
+        width: 469px;
         transition: all 1s;
     }
+
+    .gauche {
+        width: 561px;
+    }
+
     .droite {
         min-width: 90px;
         margin-right: -110px;
-        padding: 32px 0;
+        padding: 32px 0px;
     }
 
     .tplats {
@@ -558,7 +609,7 @@ a {
         margin: 1%;
     }
 
-    h4,
+    h3,
     p,
     i {
         font-size: 20px;
@@ -632,7 +683,7 @@ a {
         padding: 0;
     }
 
-    footer h3 {
+    footer h2 {
         padding: 1% 0 1% 3%;
         margin-left: 0px;
     }
@@ -663,7 +714,7 @@ a {
     }
 
     .plats {
-        width: 70%;
+        width: 800px;
         margin: 1%;
     }
 
@@ -674,14 +725,24 @@ a {
         flex-direction: column;
         align-items: center;
     }
-    .gauche:hover~.droite {
+
+    /* .gauche:hover~.droite {
         margin-right: -29px;
         transition: all 1s;
+    } */
+    .gauche:hover {
+        width: 674px;
+        transition: all 1s;
     }
+
+    .gauche {
+        width: 805px;
+    }
+
     .droite {
         min-width: 110px;
-        margin-right: -141px;
-        padding: 39px 0;
+        margin-right: -139px;
+        padding: 40px 0px;
     }
 
     .tplats {
@@ -698,7 +759,7 @@ a {
         margin: 1%;
     }
 
-    h4,
+    h3,
     p,
     i {
         font-size: 20px;
